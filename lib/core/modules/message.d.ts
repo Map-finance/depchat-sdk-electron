@@ -1,7 +1,7 @@
 import OpenIMSDK from '..';
 import { BaseResponse } from '../../types/entity';
 import { MessageItem, CardElem, AdvancedGetMessageResult } from '@openim/wasm-client-sdk/lib/types/entity';
-import { AtMsgParams, LocationMsgParams, CustomMsgParams, QuoteMsgParams, MergerMsgParams, FaceMessageParams, SendMsgParams, TypingUpdateParams, SearchLocalParams, GetAdvancedHistoryMsgParams, FindMessageParams, InsertGroupMsgParams, InsertSingleMsgParams, SetMessageLocalExParams, AccessMessageParams, ImageMsgParamsByURL, VideoMsgParamsByURL, FileMsgParamsByURL, SoundMsgParamsByURL, SendGroupReadReceiptParams, GetGroupMessageReaderParams } from '@openim/wasm-client-sdk/lib/types/params';
+import { AtMsgParams, LocationMsgParams, CustomMsgParams, QuoteMsgParams, MergerMsgParams, FaceMessageParams, SendMsgParams, TypingUpdateParams, SearchLocalParams, GetAdvancedHistoryMsgParams, FindMessageParams, InsertGroupMsgParams, InsertSingleMsgParams, SetMessageLocalExParams, AccessMessageParams, ImageMsgParamsByURL, VideoMsgParamsByURL, FileMsgParamsByURL, SoundMsgParamsByURL, SendGroupReadReceiptParams, GetGroupMessageReaderParams, FetchSurroundingParams } from '@openim/wasm-client-sdk/lib/types/params';
 import { VideoMsgByPathParams, SoundMsgByPathParams, FileMsgByPathParams } from '../../types/params';
 export declare function setupMessageModule(openIMSDK: OpenIMSDK): {
     createTextMessage: (content: string, opid?: string) => Promise<BaseResponse<MessageItem>>;
@@ -36,6 +36,9 @@ export declare function setupMessageModule(openIMSDK: OpenIMSDK): {
     searchLocalMessages: (params: SearchLocalParams, opid?: string) => Promise<BaseResponse<MessageItem[]>>;
     getAdvancedHistoryMessageList: (params: GetAdvancedHistoryMsgParams, opid?: string) => Promise<BaseResponse<AdvancedGetMessageResult>>;
     getAdvancedHistoryMessageListReverse: (params: GetAdvancedHistoryMsgParams, opid?: string) => Promise<BaseResponse<AdvancedGetMessageResult>>;
+    fetchSurroundingMessages: (params: FetchSurroundingParams, opid?: string) => Promise<BaseResponse<{
+        messageList: MessageItem[];
+    }>>;
     findMessageList: (params: FindMessageParams[], opid?: string) => Promise<BaseResponse<MessageItem[]>>;
     insertGroupMessageToLocalStorage: (params: InsertGroupMsgParams, opid?: string) => Promise<BaseResponse<void>>;
     insertSingleMessageToLocalStorage: (params: InsertSingleMsgParams, opid?: string) => Promise<BaseResponse<void>>;
@@ -76,6 +79,9 @@ export interface MessageModuleApi {
     searchLocalMessages: (params: SearchLocalParams, opid?: string) => Promise<BaseResponse<MessageItem[]>>;
     getAdvancedHistoryMessageList: (params: GetAdvancedHistoryMsgParams, opid?: string) => Promise<BaseResponse<AdvancedGetMessageResult>>;
     getAdvancedHistoryMessageListReverse: (params: GetAdvancedHistoryMsgParams, opid?: string) => Promise<BaseResponse<AdvancedGetMessageResult>>;
+    fetchSurroundingMessages: (params: FetchSurroundingParams, opid?: string) => Promise<BaseResponse<{
+        messageList: MessageItem[];
+    }>>;
     findMessageList: (params: FindMessageParams[], opid?: string) => Promise<BaseResponse<MessageItem[]>>;
     insertGroupMessageToLocalStorage: (params: InsertGroupMsgParams, opid?: string) => Promise<BaseResponse<void>>;
     insertSingleMessageToLocalStorage: (params: InsertSingleMsgParams, opid?: string) => Promise<BaseResponse<void>>;

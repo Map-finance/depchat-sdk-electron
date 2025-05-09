@@ -142,6 +142,7 @@ declare class OpenIMSDK extends Emitter implements UserModuleApi, FriendModuleAp
     createFileMessageByURL: MessageModuleApi['createFileMessageByURL'];
     getAdvancedHistoryMessageList: MessageModuleApi['getAdvancedHistoryMessageList'];
     getAdvancedHistoryMessageListReverse: MessageModuleApi['getAdvancedHistoryMessageListReverse'];
+    fetchSurroundingMessages: MessageModuleApi['fetchSurroundingMessages'];
     sendMessage: MessageModuleApi['sendMessage'];
     sendMessageNotOss: MessageModuleApi['sendMessageNotOss'];
     findMessageList: MessageModuleApi['findMessageList'];

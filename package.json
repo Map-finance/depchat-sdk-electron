@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/OpenIMSDK/openim-sdk-electron.git"
+    "url": "git+https://github.com/Map-finance/depchat-sdk-electron.git"
   },
   "license": "MIT",
   "author": {
@@ -34,12 +34,12 @@
     "node": ">=12.0"
   },
   "keywords": [
-    "openim"
+    "depchat"
   ],
   "bugs": {
-    "url": "https://github.com/OpenIMSDK/openim-sdk-electron/issues"
+    "url": "https://github.com/Map-finance/depchat-sdk-electron/issues"
   },
-  "homepage": "https://github.com/OpenIMSDK/openim-sdk-electron#readme",
+  "homepage": "https://github.com/Map-finance/depchat-sdk-electron#readme",
   "devDependencies": {
     "@commitlint/cli": "^16.2.4",
     "@commitlint/config-conventional": "^16.2.4",
@@ -81,7 +81,7 @@
     "uuid": "^9.0.0"
   },
   "peerDependencies": {
-    "@openim/wasm-client-sdk": "^3.8.3-patch.3",
+    "@openim/wasm-client-sdk": "git+https://github.com/Map-finance/depchat-sdk-js-wasm.git#dev",
     "electron": ">=12.0.0"
   }
 }

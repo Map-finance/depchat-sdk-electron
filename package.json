@@ -43,7 +43,7 @@
   "devDependencies": {
     "@commitlint/cli": "^16.2.4",
     "@commitlint/config-conventional": "^16.2.4",
-    "@openim/wasm-client-sdk": "git+https://github.com/Map-finance/depchat-sdk-js-wasm.git",
+    "@openim/wasm-client-sdk": "git+https://github.com/Map-finance/depchat-sdk-js-wasm.git#test",
     "@rollup/plugin-alias": "^5.1.0",
     "@rollup/plugin-terser": "^0.4.4",
     "@types/ffi-napi": "^4.0.10",
@@ -81,7 +81,7 @@
     "uuid": "^9.0.0"
   },
   "peerDependencies": {
-    "@openim/wasm-client-sdk": "git+https://github.com/Map-finance/depchat-sdk-js-wasm.git",
+    "@openim/wasm-client-sdk": "git+https://github.com/Map-finance/depchat-sdk-js-wasm.git#test",
     "electron": ">=12.0.0"
   }
 }

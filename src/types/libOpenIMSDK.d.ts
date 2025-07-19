@@ -255,6 +255,12 @@ declare module 'libOpenIMSDK' {
       operationID: string,
       conversationID: string
     ): void;
+    mark_messages_as_read_by_msg_id(
+      cCallback: CB_S_I_S_S,
+      operationID: string,
+      conversationID: string,
+      clientMsgIDList: string[],
+    ): void;
     delete_message_from_local_storage(
       cCallback: CB_S_I_S_S,
       operationID: string,

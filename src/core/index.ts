@@ -450,6 +450,12 @@ class OpenIMSDK
       'void',
       ['baseCallback *', 'str', 'str']
     );
+    this.libOpenIMSDK.mark_messages_as_read_by_msg_id = this.lib.func(
+      '__stdcall',
+      'mark_messages_as_read_by_msg_id',
+      'void',
+      ['baseCallback *', 'str', 'str', 'str']
+    );
     this.libOpenIMSDK.delete_message_from_local_storage = this.lib.func(
       '__stdcall',
       'delete_message_from_local_storage',
@@ -1345,6 +1351,7 @@ class OpenIMSDK
   getConversationIDBySessionType!: ConversationModuleApi['getConversationIDBySessionType'];
   getTotalUnreadMsgCount!: ConversationModuleApi['getTotalUnreadMsgCount'];
   markConversationMessageAsRead!: ConversationModuleApi['markConversationMessageAsRead'];
+  markMessagesAsReadByMsgID!: ConversationModuleApi['markMessagesAsReadByMsgID'];
   setConversationDraft!: ConversationModuleApi['setConversationDraft'];
   pinConversation!: ConversationModuleApi['pinConversation'];
   setConversationRecvMessageOpt!: ConversationModuleApi['setConversationRecvMessageOpt'];

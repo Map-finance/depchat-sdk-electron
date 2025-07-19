@@ -12,6 +12,7 @@ export declare function setupConversationModule(openIMSDK: OpenIMSDK): {
     getConversationIDBySessionType: (params: GetOneConversationParams, opid?: string) => Promise<BaseResponse<string>>;
     getTotalUnreadMsgCount: (opid?: string) => Promise<BaseResponse<number>>;
     markConversationMessageAsRead: (conversationID: string, opid?: string) => Promise<BaseResponse<void>>;
+    markMessagesAsReadByMsgID: (conversationID: string, clientMsgIDList: string[], opid?: string) => Promise<BaseResponse<void>>;
     setConversationDraft: (params: SetConversationDraftParams, opid?: string) => Promise<BaseResponse<void>>;
     setConversation: (params: SetConversationParams, opid?: string) => Promise<BaseResponse<void>>;
     pinConversation: (params: SetConversationPinParams, opid?: string) => Promise<BaseResponse<void>>;
@@ -37,6 +38,7 @@ export interface ConversationModuleApi {
     getConversationIDBySessionType: (params: GetOneConversationParams, opid?: string) => Promise<BaseResponse<string>>;
     getTotalUnreadMsgCount: (opid?: string) => Promise<BaseResponse<number>>;
     markConversationMessageAsRead: (conversationID: string, opid?: string) => Promise<BaseResponse<void>>;
+    markMessagesAsReadByMsgID: (conversationID: string, clientMsgIDList: string[], opid?: string) => Promise<BaseResponse<void>>;
     setConversationDraft: (params: SplitConversationParams, opid?: string) => Promise<BaseResponse<void>>;
     pinConversation: (params: SplitConversationParams, opid?: string) => Promise<BaseResponse<void>>;
     setConversation: (params: SetConversationParams, opid?: string) => Promise<BaseResponse<void>>;

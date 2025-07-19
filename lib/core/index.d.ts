@@ -105,6 +105,7 @@ declare class OpenIMSDK extends Emitter implements UserModuleApi, FriendModuleAp
     getConversationIDBySessionType: ConversationModuleApi['getConversationIDBySessionType'];
     getTotalUnreadMsgCount: ConversationModuleApi['getTotalUnreadMsgCount'];
     markConversationMessageAsRead: ConversationModuleApi['markConversationMessageAsRead'];
+    markMessagesAsReadByMsgID: ConversationModuleApi['markMessagesAsReadByMsgID'];
     setConversationDraft: ConversationModuleApi['setConversationDraft'];
     pinConversation: ConversationModuleApi['pinConversation'];
     setConversationRecvMessageOpt: ConversationModuleApi['setConversationRecvMessageOpt'];

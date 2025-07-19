@@ -95,13 +95,13 @@ export function setupConversationModule(openIMSDK: OpenIMSDK) {
           conversationID
         );
       }),
-    markMessagesAsReadByMsgID: (conversationID: string, clientMsgIDList: string[], opid = uuidV4()) =>
+    markMessagesAsReadByMsgID: (params, opid = uuidV4()) =>
       new Promise<BaseResponse<void>>((resolve, reject) => {
         openIMSDK.libOpenIMSDK.mark_messages_as_read_by_msg_id(
           openIMSDK.baseCallbackWrap<void>(resolve, reject),
           opid,
-          conversationID,
-          JSON.stringify(clientMsgIDList),
+          params.conversationID,
+          JSON.stringify(params.clientMsgIDList),
         );
       }),
     setConversationDraft: (
@@ -303,8 +303,7 @@ export interface ConversationModuleApi {
     opid?: string
   ) => Promise<BaseResponse<void>>;
   markMessagesAsReadByMsgID: (
-    conversationID: string,
-    clientMsgIDList: string[],
+    params: any,
     opid?: string
   ) => Promise<BaseResponse<void>>;
   setConversationDraft: (

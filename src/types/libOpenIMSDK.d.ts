@@ -259,7 +259,7 @@ declare module 'libOpenIMSDK' {
       cCallback: CB_S_I_S_S,
       operationID: string,
       conversationID: string,
-      clientMsgIDList: string[],
+      clientMsgIDList: string,
     ): void;
     delete_message_from_local_storage(
       cCallback: CB_S_I_S_S,

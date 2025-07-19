@@ -101,7 +101,7 @@ export function setupConversationModule(openIMSDK: OpenIMSDK) {
           openIMSDK.baseCallbackWrap<void>(resolve, reject),
           opid,
           conversationID,
-          clientMsgIDList,
+          JSON.stringify(clientMsgIDList),
         );
       }),
     setConversationDraft: (
